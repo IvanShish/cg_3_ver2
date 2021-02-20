@@ -18,7 +18,7 @@ public class MainWindow extends JFrame {
 
         //Настройка для NURBS
         NurbsManager nurbsManager = new NurbsManager(new Point[]{
-                new Point(-0.8, -0.5, 0, 1), new Point(-0.5, 0, 1, 1), new Point(0, 0.4, 2, 1),
+                new Point(-0.8, -0.5, 0, 0.9), new Point(-0.5, 0, 1, 1), new Point(0, 0.4, 2, 1),
                 new Point(0.3, 0.2, 3, 1), new Point(0.6, -0.2, 4, 1), new Point(0.8, 0, 5, 1),
                 new Point(0.9, 0.5, 6, 1)});
 
@@ -69,7 +69,10 @@ public class MainWindow extends JFrame {
             selectedPoint.setWeight(wSlider.getValue()/100f);
             gljpanel.display();
         });
+
+        buttonsPanel.add(new JLabel("x"));
         buttonsPanel.add(xSlider);
+        buttonsPanel.add(new JLabel("y"));
         buttonsPanel.add(ySlider);
         buttonsPanel.add(new JLabel("Weight"));
         buttonsPanel.add(wSlider);
